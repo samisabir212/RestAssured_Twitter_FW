@@ -3,12 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.Twitter.Sami.Twitter_API_Play">
+      <class name="com.Twitter.Sami.Twitter_Play_With_Posts">
         <methods>
+          <include name="delete_Tweet_ByID"/>
           <include name="setup"/>
-          <include name="read_Tweet_Text"/>
+          <include name="post_MY_Tweet"/>
+          <include name="read_MY_Tweet"/>
         </methods>
-      </class> <!-- com.Twitter.Sami.Twitter_API_Play -->
+      </class> <!-- com.Twitter.Sami.Twitter_Play_With_Posts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -40,7 +40,7 @@ public class UserTimeLine_Test {
 	
 	
 	@Test(enabled = false)
-	public void 	readTweets()	{
+	public void readTweets()	{
 		given()
 		.spec(RestUtilities.createQueryParam(reqSpec, "count"	, "4")) //limiting the amount of tweets we want to output by 1 check document of time line on twitter.. this should only return one tweet
 		.when()
@@ -55,6 +55,7 @@ public class UserTimeLine_Test {
 	
 	@Test(enabled = false)
 	public void readTweets2_RESPONSE() {
+		
 		RestUtilities.setEndPoint(EndPoints.STATUSES_USER_TIMELINE);
 		Response res = RestUtilities.getResponse(RestUtilities
 				.createQueryParam(reqSpec, "count", "4"), "get");

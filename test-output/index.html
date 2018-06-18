@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,6 +100,11 @@
                       <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.Twitter.Sami.Twitter_Play_With_Posts" hash-for-method="delete_Tweet_ByID">delete_Tweet_ByID</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.Twitter.Sami.Twitter_Play_With_Posts" hash-for-method="post_MY_Tweet">post_MY_Tweet</a> <!-- method navigator-link -->
@@ -130,6 +135,13 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="delete_Tweet_ByID">
+                  </a> <!-- delete_Tweet_ByID -->
+                  <span class="method-name">delete_Tweet_ByID</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="post_MY_Tweet">
                   </a> <!-- post_MY_Tweet -->
                   <span class="method-name">post_MY_Tweet</span>
@@ -147,7 +159,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/np/61dbzy9x4vz7n8t8yvcn0b0w0000gn/T/testng-eclipse-336476123/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/np/61dbzy9x4vz7n8t8yvcn0b0w0000gn/T/testng-eclipse--1824414475/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -196,15 +208,19 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'post_MY_Tweet')
 data.setCell(0, 2, 'com.Twitter.Sami.Twitter_Play_With_Posts')
-data.setCell(0, 3, 1747);
+data.setCell(0, 3, 1737);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'read_MY_Tweet')
 data.setCell(1, 2, 'com.Twitter.Sami.Twitter_Play_With_Posts')
-data.setCell(1, 3, 701);
+data.setCell(1, 3, 476);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'delete_Tweet_ByID')
+data.setCell(2, 2, 'com.Twitter.Sami.Twitter_Play_With_Posts')
+data.setCell(2, 3, 382);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -242,11 +258,15 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">post_MY_Tweet</span>
-                <span class="method-start">529 ms</span>
+                <span class="method-start">537 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">read_MY_Tweet</span>
-                <span class="method-start">2278 ms</span>
+                <span class="method-start">2277 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">delete_Tweet_ByID</span>
+                <span class="method-start">2755 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

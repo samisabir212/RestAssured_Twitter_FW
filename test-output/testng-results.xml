@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2988" started-at="2018-03-17T18:30:31Z" finished-at="2018-03-17T18:30:34Z">
+  <suite name="Default suite" duration-ms="3146" started-at="2018-06-18T02:56:30Z" finished-at="2018-06-18T02:56:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2988" started-at="2018-03-17T18:30:31Z" finished-at="2018-03-17T18:30:34Z">
+    <test name="Default test" duration-ms="3146" started-at="2018-06-18T02:56:30Z" finished-at="2018-06-18T02:56:33Z">
       <class name="com.Twitter.Sami.Twitter_Play_With_Posts">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.Twitter.Sami.Twitter_Play_With_Posts@5c5a1b69]" name="setup" is-config="true" duration-ms="521" started-at="2018-03-17T14:30:31Z" finished-at="2018-03-17T14:30:31Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.Twitter.Sami.Twitter_Play_With_Posts@5c5a1b69]" name="setup" is-config="true" duration-ms="531" started-at="2018-06-17T22:56:30Z" finished-at="2018-06-17T22:56:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="post_MY_Tweet()[pri:1, instance:com.Twitter.Sami.Twitter_Play_With_Posts@5c5a1b69]" name="post_MY_Tweet" duration-ms="1747" started-at="2018-03-17T14:30:31Z" finished-at="2018-03-17T14:30:33Z">
+        <test-method status="PASS" signature="post_MY_Tweet()[pri:0, instance:com.Twitter.Sami.Twitter_Play_With_Posts@5c5a1b69]" name="post_MY_Tweet" duration-ms="1737" started-at="2018-06-17T22:56:30Z" finished-at="2018-06-17T22:56:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post_MY_Tweet -->
-        <test-method status="PASS" signature="read_MY_Tweet()[pri:2, instance:com.Twitter.Sami.Twitter_Play_With_Posts@5c5a1b69]" name="read_MY_Tweet" duration-ms="701" started-at="2018-03-17T14:30:33Z" finished-at="2018-03-17T14:30:34Z">
+        <test-method status="PASS" signature="read_MY_Tweet()[pri:0, instance:com.Twitter.Sami.Twitter_Play_With_Posts@5c5a1b69]" name="read_MY_Tweet" duration-ms="476" started-at="2018-06-17T22:56:32Z" depends-on-methods="com.Twitter.Sami.Twitter_Play_With_Posts.post_MY_Tweet" finished-at="2018-06-17T22:56:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- read_MY_Tweet -->
+        <test-method status="PASS" signature="delete_Tweet_ByID()[pri:0, instance:com.Twitter.Sami.Twitter_Play_With_Posts@5c5a1b69]" name="delete_Tweet_ByID" duration-ms="382" started-at="2018-06-17T22:56:33Z" depends-on-methods="com.Twitter.Sami.Twitter_Play_With_Posts.read_MY_Tweet" finished-at="2018-06-17T22:56:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- delete_Tweet_ByID -->
       </class> <!-- com.Twitter.Sami.Twitter_Play_With_Posts -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

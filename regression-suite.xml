@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Regression Suite">
+	<test name="RestAssured Test">
+		<classes>
+			<class
+				name="com.Twitter.Sami.Twitter_Get_Post_Delete_Flow"></class>
+		</classes>
+	</test>
+</suite>

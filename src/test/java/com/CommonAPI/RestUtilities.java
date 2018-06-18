@@ -25,10 +25,12 @@ public class RestUtilities {
 	 * 
 	 */
 	
-	// create request and response builder objects
-	public static String ENDPOINT; // global variable for endpoints// use it with setEndPoint method
+	public static String ENDPOINT; // global variable for endpoints || use it with setEndPoint method
+	
+	// request and response builders
 	public static RequestSpecBuilder REQUEST_BUILDER; //to build a request
 	public static ResponseSpecBuilder RESPONSE_BUILDER; //to build a response
+
 
 	public static RequestSpecification REQUEST_SPEC; //object of request spec
 	public static ResponseSpecification RESPONSE_SPEC;//object of response spec
@@ -40,16 +42,41 @@ public class RestUtilities {
 		ENDPOINT = epoint;
 
 	}
+	
+	
+	
+//	
+//	public static RequestSpecification getRquestWithOutAuth() {
+//		
+//	REQUEST_BUILDER = new RequestSpecBuilder();
+//	REQUEST_BUILDER.setBasePath()
+//		
+//		return REQUEST_SPEC;
+//
+//	}
+//	
+//	
 
 	// add to this request spec return type
 	//call this in test class to get request specification 
 	//this needs to return a request specification object
+	/*
+	 * basically this get request spec, is using Oauth 
+	 * creating a request builder object
+	 * provide the oauth data
+	 * setting and passing the base uri
+	 * setting the authscheme by passing the authSchecme object to .setAuth method
+	 * finally building the request
+	 * and returning the request into REQUST_SPEC object.
+	 */
 	public static RequestSpecification getRequestSpecification() {
 
 		AuthenticationScheme authScheme = // check out the other authScheme methods
 				RestAssured.oauth(Auth.CONSUMER_KEY, Auth.CONSUMER_SECRET, Auth.ACCESS_TOKEN, Auth.ACCESS_SECRET);		
 		REQUEST_BUILDER = new RequestSpecBuilder(); //create new request builder object **** KEY object 
 		REQUEST_BUILDER.setBaseUri(Path.BASE_URI); //setting base URI
+		
+		//the setAuth method sets your authorization
 		REQUEST_BUILDER.setAuth(authScheme);  //setting authorization
 		REQUEST_SPEC = REQUEST_BUILDER.build(); //building the request **Key finishing move
 		return REQUEST_SPEC; // return the Request specification and stor into object
@@ -60,6 +87,11 @@ public class RestUtilities {
 	 * response with an expected code status of 200
 	 * it also makes sure the expected response time is less than 3 seconds
 	 * 
+	 * Response specification
+	 * i want this method to get the response
+	 * validate that the response is 200 (ok)
+	 * make sure the response time is less than 3 seconds
+	 * finally build the response and pass it into a response_spec object
 	 */
 	public static ResponseSpecification getResponseSpecification() {
 		RESPONSE_BUILDER = new ResponseSpecBuilder(); // create reponse builder object
@@ -70,7 +102,6 @@ public class RestUtilities {
 
 	}
 
-	// creqte Query param with map
 	/*
 	 * this is a method to create paramter. query parameter for the end point target
 	 */
@@ -81,6 +112,8 @@ public class RestUtilities {
 		 */
 		return rspec.queryParam(param, value);
 	}
+	
+	
 	//create query param using map key value pair
 	public static RequestSpecification createQueryParam(RequestSpecification rspec, Map<String, String> queryMap) {
 
